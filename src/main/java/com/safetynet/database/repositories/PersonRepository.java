@@ -12,6 +12,6 @@ import java.util.List;
 public interface PersonRepository extends JpaRepository<PersonEntity, Long> {
 
 	@Query("SELECT p from PersonEntity p WHERE p.addressEntity.station =:variable")
-	List<PersonEntity> findPersonEntitiesByAddressEntityStation(@Param("stationNumber") int stationNumber);
+	List<PersonEntity> findPersonEntitiesByAddressEntityStation(@Param("variable") int stationNumber);
 
 }
